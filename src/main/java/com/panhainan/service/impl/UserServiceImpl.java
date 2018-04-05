@@ -5,7 +5,6 @@ import com.panhainan.dao.UserDao;
 import com.panhainan.dto.CheckResult;
 import com.panhainan.dto.UserSignInResult;
 import com.panhainan.dto.UserSignUpResult;
-import com.panhainan.entity.Car;
 import com.panhainan.entity.User;
 import com.panhainan.exception.DataExistException;
 import com.panhainan.exception.DataInsertException;
@@ -39,7 +38,6 @@ public class UserServiceImpl implements UserService {
     public UserSignUpResult signUp(UserSignUpForm userSignUpForm)
             throws SystemException {
 
-        Car c = new Car();
 
         // 检查用户账户名和邮箱是否已存在
         if (checkUserIsExistByName(userSignUpForm.getUserName())) {
